@@ -7,7 +7,7 @@ export function PortfolioFilter({filters, selected, onSelectFilter}) {
       {filters.map(filter => (
         <button
           className={[styles.element, filter === selected ? styles.selected : ""].join(" ")}
-          onClick={onSelectFilter}>{filter}</button>
+          onClick={onSelectFilter.bind(this, filter)}>{filter}</button>
       ))}
     </div>
   );
